@@ -1,0 +1,1 @@
+java -cp build;mysql-connector-j-8.2.0.jar Application

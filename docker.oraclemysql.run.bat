@@ -1,0 +1,1 @@
+docker run --rm -p "3306:3306" --name oraclemysqldb -e MYSQL_ROOT_PASSWORD=example -e MYSQL_DATABASE=exampledb -d mysql:8.2.0-oracle
