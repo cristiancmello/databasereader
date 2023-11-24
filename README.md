@@ -133,6 +133,10 @@ haja limitações
 
 - Execute `DatabaseReader` e note que não foi necessário fazer nenhuma mudança no código da aplicação
 
+## Acessando PostgreSQL com PostgreSQL JDBC Driver
+
+Vá em [Postgres Example](/tree/postgres-example).
+
 ## Minhas notas
 
 - Observe os arquivos atentamente, como os `.bat`. A medida que surgirem dúvidas, pode me contatar.
