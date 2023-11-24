@@ -114,6 +114,25 @@ Third record: {3, Livia}
 Connection was closed.
 ```
 
+## Acessando MariaDB com MySQL Connector/J
+
+> MariaDB é outro DB relacional com histórica compatibilidade (não total) com MySQL
+
+- Segundo [About MariaDB Connector/J](https://mariadb.com/kb/en/about-mariadb-connector-j/) existe compatibilidade entre
+MySQL e MariaDB promovida pelo MySQL Connector/J.
+  - Documentação diz que MariaDB Connector/J 3.3.0 é compatível com MySQL >=5.5 e todas as versões do MariaDB, seguindo a JDBC 4.2
+  - [MariaDB versus MySQL: Compatibility](https://mariadb.com/kb/en/mariadb-vs-mysql-compatibility/) aponta que existe compatibilidade entre
+  atuais MySQL connectors (PHP, Perl, Python, Java, .NET, MyODBC, Ruby, MySQL C connector etc) e MariaDB
+
+### Exercitando
+
+- Execute o `docker.mariadb.run.bat` para iniciar o MariaDB, certificando-se que a porta `3306` esteja livre ou utilize alguma outra caso
+haja limitações
+
+- Reproduza as condições de demonstração, com uma tabela `persons` com 3 registros inseridos
+
+- Execute `DatabaseReader` e note que não foi necessário fazer nenhuma mudança no código da aplicação
+
 ## Minhas notas
 
 - Observe os arquivos atentamente, como os `.bat`. A medida que surgirem dúvidas, pode me contatar.
