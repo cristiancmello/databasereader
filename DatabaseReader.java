@@ -12,7 +12,9 @@ public class DatabaseReader {
   public void open() {
     try {
       // Precisamos registrar o driver do MySQL
-      Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
+      // Segundo https://www.baeldung.com/java-jdbc-loading-drivers, JDBC <= 4 e Java SE <= 1.6 nao carregava automaticamente
+      // As versoes atuais do JDBC nao precisa mais
+      // Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
 
       // Criamos uma instancia de Connection que vai usar o protocolo do MySQL
       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exampledb?useCursorFetch=true", "root", "example");
