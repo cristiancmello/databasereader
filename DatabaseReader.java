@@ -11,13 +11,7 @@ public class DatabaseReader {
 
   public void open() {
     try {
-      // Precisamos registrar o driver do MySQL
-      // Segundo https://www.baeldung.com/java-jdbc-loading-drivers, JDBC <= 4 e Java SE <= 1.6 nao carregava automaticamente
-      // As versoes atuais do JDBC nao precisa mais
-      // Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
-
-      // Criamos uma instancia de Connection que vai usar o protocolo do MySQL
-      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exampledb?useCursorFetch=true", "root", "example");
+      conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/exampledb", "postgres", "example");
 
       System.out.println("Connection created.");
     } catch (SQLException ex) {
@@ -33,9 +27,6 @@ public class DatabaseReader {
     try {
       stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
       rs = stmt.executeQuery("SELECT * FROM persons");
-      rs.setFetchSize(1);
-
-      System.out.println("Fetch size: " + rs.getFetchSize());
 
     } catch (SQLException ex) {
       System.err.println("SQLException: " + ex.getMessage());

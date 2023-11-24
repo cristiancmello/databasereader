@@ -1,0 +1,1 @@
+docker run --rm --detach -p "5432:5432" --name postgres -e POSTGRES_PASSWORD=example -e POSTGRES_DB=exampledb postgres:16.1

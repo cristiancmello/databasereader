@@ -1,1 +1,1 @@
-java -cp build;mysql-connector-j-8.2.0.jar Application
+java -cp build;postgresql-42.7.0.jar Application
