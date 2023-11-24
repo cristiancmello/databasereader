@@ -135,7 +135,7 @@ haja limitações
 
 ## Acessando PostgreSQL com PostgreSQL JDBC Driver
 
-Vá em [Postgres Example](./tree/blob/postgres-example/README.md).
+Vá em [Postgres Example](https://github.com/cristiancmello/databasereader/tree/postgres-example).
 
 ## Minhas notas
 
